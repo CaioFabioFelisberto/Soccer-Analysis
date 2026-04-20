@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>League DNA | Soccer Statistics</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='base.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='league_dna.css') }}">
+</head>
+<body class="module-page league-page">
+    <main class="shell">
+        <header class="topbar">
+            <div class="brand">
+                <div class="brand-mark">SC</div>
+                <div class="brand-copy">
+                    <small>Module 06</small>
+                    <strong>League DNA</strong>
+                </div>
+            </div>
+            <a class="home-link" href="/">Back to home</a>
+        </header>
+
+        <section class="analysis-layout">
+            <article class="analysis-panel">
+                <span class="eyebrow">Competition profiling</span>
+                <h1>League DNA</h1>
+                <p>Compare the tactical identities of the top five European leagues and understand where player profiles are typically developed.</p>
+
+                <p><strong>How to read it:</strong> each distribution highlights central tendency and spread, revealing whether a league is balanced, extreme, or highly variable.</p>
+                <p><strong>Scouting value:</strong> league context helps avoid false comparisons when projecting players between competitions.</p>
+
+                <ul>
+                    <li>Use median levels to identify the baseline style of each league.</li>
+                    <li>Use spread to evaluate tactical diversity and role volatility.</li>
+                    <li>Use outlier behavior to spot leagues that create niche specialist profiles.</li>
+                </ul>
+
+                <p><strong>Insight:</strong> successful cross-league recruitment depends on translating role demands, not just copying raw numbers.</p>
+            </article>
+
+            <aside class="plot-panel">
+                <span class="eyebrow">Interactive chart</span>
+                <h2>Box plot</h2>
+                <div class="plot-frame">
+                    {{ plot | safe }}
+                </div>
+            </aside>
+        </section>
+    </main>
+</body>
+</html>

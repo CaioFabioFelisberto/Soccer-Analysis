@@ -1,0 +1,40 @@
+body.home-page {
+	--accent: #6cbf63;
+	--accent-2: #d4a73b;
+	--accent-3: #ffffff;
+}
+
+.home-page .hero {
+	background:
+		linear-gradient(180deg, rgba(255, 255, 255, 0.92), rgba(242, 249, 232, 0.92)),
+		radial-gradient(circle at top right, rgba(212, 167, 59, 0.16), transparent 34%);
+}
+
+.home-page .module-card:nth-child(1) {
+	background:
+		linear-gradient(180deg, rgba(255, 255, 255, 0.92), rgba(242, 249, 232, 0.92)),
+		radial-gradient(circle at top right, rgba(108, 191, 99, 0.12), transparent 30%);
+}
+
+.home-page .module-card:nth-child(2) {
+	background:
+		linear-gradient(180deg, rgba(255, 255, 255, 0.92), rgba(242, 249, 232, 0.92)),
+		radial-gradient(circle at top right, rgba(212, 167, 59, 0.12), transparent 30%);
+}
+
+.home-page .module-card:nth-child(3) {
+	background:
+		linear-gradient(180deg, rgba(255, 255, 255, 0.92), rgba(242, 249, 232, 0.92)),
+		radial-gradient(circle at top right, rgba(143, 211, 112, 0.12), transparent 30%);
+}
+
+.home-page .module-card:nth-child(4) {
+	background:
+		linear-gradient(180deg, rgba(255, 255, 255, 0.92), rgba(242, 249, 232, 0.92)),
+		radial-gradient(circle at top right, rgba(108, 191, 99, 0.12), transparent 30%);
+}
+
+#h1_index {
+    font-size: clamp(2.5rem, 5vw, 3rem);
+    max-width: None;
+}

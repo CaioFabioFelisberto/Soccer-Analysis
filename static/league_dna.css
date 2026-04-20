@@ -1,0 +1,17 @@
+body.league-page {
+	--accent: #6cbf63;
+	--accent-2: #d4a73b;
+	--accent-3: #ffffff;
+}
+
+.league-page .analysis-panel {
+	background:
+		linear-gradient(180deg, rgba(255, 255, 255, 0.92), rgba(242, 249, 232, 0.92)),
+		radial-gradient(circle at top left, rgba(108, 191, 99, 0.1), transparent 32%);
+}
+
+.league-page .plot-panel {
+	background:
+		linear-gradient(180deg, rgba(255, 255, 255, 0.92), rgba(242, 249, 232, 0.92)),
+		radial-gradient(circle at top right, rgba(212, 167, 59, 0.1), transparent 30%);
+}

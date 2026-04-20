@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Player Radar | Soccer Statistics</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='base.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='player_radar.css') }}">
+</head>
+<body class="module-page radar-page">
+    <main class="shell">
+        <header class="topbar">
+            <div class="brand">
+                <div class="brand-mark">SC</div>
+                <div class="brand-copy">
+                    <small>Module 04</small>
+                    <strong>Player Radar</strong>
+                </div>
+            </div>
+            <a class="home-link" href="/">Back to home</a>
+        </header>
+
+        <section class="analysis-layout">
+            <article class="analysis-panel">
+                <span class="eyebrow">Head-to-head comparison</span>
+                <h1>Profile radar</h1>
+                <p>Compare two players across multiple dimensions to see whether one profile covers the other or whether the squad needs a different tactical shape.</p>
+
+                <p><strong>How to read it:</strong> a wider filled area means more volume; a similar shape means similar roles; a different shape means different footballing responsibilities.</p>
+                <p><strong>Use case:</strong> ideal for scouting replacements, confirming upgrades, or checking whether two names are actually solving the same problem.</p>
+
+                <form action="{{ url_for('player_radar') }}" method="POST">
+                    <input type="text" name="player_1" placeholder="Enter player 1 name">
+                    <input type="text" name="player_2" placeholder="Enter player 2 name">
+                    <button type="submit">Generate radar chart</button>
+                </form>
+            </article>
+
+            <aside class="plot-panel">
+                <span class="eyebrow">Interactive chart</span>
+                <h2>Radar output</h2>
+                <div class="plot-frame">
+                    {% if plot %}
+                        {{ plot | safe }}
+                    {% else %}
+                        <p class="empty-state">Enter two names to generate the radar and compare the profiles side by side.</p>
+                    {% endif %}
+                </div>
+            </aside>
+        </section>
+    </main>
+</body>
+</html>

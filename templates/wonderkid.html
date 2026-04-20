@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital Scout | Soccer Statistics</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='base.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='wonderkid.css') }}">
+</head>
+<body class="module-page wonderkid-page">
+    <main class="shell">
+        <header class="topbar">
+            <div class="brand">
+                <div class="brand-mark">SC</div>
+                <div class="brand-copy">
+                    <small>Module 03</small>
+                    <strong>Digital Scout</strong>
+                </div>
+            </div>
+            <a class="home-link" href="/">Back to home</a>
+        </header>
+
+        <section class="analysis-layout">
+            <article class="analysis-panel">
+                <span class="eyebrow">Youth scouting</span>
+                <h1>Hunting wonderkids</h1>
+                <p>Players 21 or younger are filtered by per-90 efficiency so the chart highlights production, not just accumulated minutes.</p>
+
+                <p><strong>Why it works:</strong> elite recruitment buys trajectory, not just current reputation.</p>
+                <p><strong>What to watch:</strong> players who already show veteran-level output in shot creation or finishing efficiency.</p>
+
+                <ul>
+                    <li>Prioritize the upper-right quadrant for high-upside attackers with immediate impact signals.</li>
+                    <li>Compare production per 90 instead of raw totals to avoid minute bias.</li>
+                    <li>Use the minimum-playing-time filter as a first step, not the final verdict.</li>
+                </ul>
+
+                <p><strong>Insight:</strong> the best opportunities often appear before the market fully adjusts to the player's level.</p>
+            </article>
+
+            <aside class="plot-panel">
+                <span class="eyebrow">Interactive chart</span>
+                <h2>Bar chart</h2>
+                <div class="plot-frame">
+                    {{ plot | safe }}
+                </div>
+            </aside>
+        </section>
+    </main>
+</body>
+</html>

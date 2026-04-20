@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Playmakers' DNA | Soccer Statistics</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='base.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='playmakers.css') }}">
+</head>
+<body class="module-page playmakers-page">
+    <main class="shell">
+        <header class="topbar">
+            <div class="brand">
+                <div class="brand-mark">SC</div>
+                <div class="brand-copy">
+                    <small>Module 01</small>
+                    <strong>Playmakers' DNA</strong>
+                </div>
+            </div>
+            <a class="home-link" href="/">Back to home</a>
+        </header>
+
+        <section class="analysis-layout">
+            <article class="analysis-panel">
+                <span class="eyebrow">Tactical analysis</span>
+                <h1>The Playmakers' DNA</h1>
+                <p>Progressive passes and progressive carries reveal two complementary ways to break a defensive block. This module separates pass-led controllers from dribble-led disruptors.</p>
+
+                <p><strong>Top right quadrant:</strong> complete engines who influence progression in every phase.</p>
+                <p><strong>Right side:</strong> maestros who manipulate tempo with passing volume.</p>
+                <p><strong>Upper side:</strong> infiltrators who attack space through carrying and acceleration.</p>
+
+                <ul>
+                    <li>Use the right-hand side to find players who advance the ball with range and consistency.</li>
+                    <li>Use the upper band to target ball-carrying specialists that damage compact blocks.</li>
+                    <li>Use the overlap zone when scouting players that fit hybrid possession systems.</li>
+                </ul>
+
+                <p><strong>Insight:</strong> If a team dominates possession but struggles to create separation, the solution is often a profile higher on the Y-axis, not simply another passer.</p>
+            </article>
+
+            <aside class="plot-panel">
+                <span class="eyebrow">Interactive chart</span>
+                <h2>Scatter plot</h2>
+                <div class="plot-frame">
+                    {{ plot | safe }}
+                </div>
+            </aside>
+        </section>
+    </main>
+</body>
+</html>

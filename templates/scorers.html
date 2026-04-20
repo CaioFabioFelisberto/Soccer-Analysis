@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Striker X-Ray | Soccer Statistics</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='base.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='scorers.css') }}">
+</head>
+<body class="module-page scorers-page">
+    <main class="shell">
+        <header class="topbar">
+            <div class="brand">
+                <div class="brand-mark">SC</div>
+                <div class="brand-copy">
+                    <small>Module 02</small>
+                    <strong>Striker X-Ray</strong>
+                </div>
+            </div>
+            <a class="home-link" href="/">Back to home</a>
+        </header>
+
+        <section class="analysis-layout">
+            <article class="analysis-panel">
+                <span class="eyebrow">Finishing profile</span>
+                <h1>Cold blood vs. set pieces</h1>
+                <p>The chart separates open-play goals from penalties so you can judge who really carries attacking output in difficult match states.</p>
+
+                <p><strong>Why it matters:</strong> a raw goal total can hide dependency on dead-ball situations.</p>
+                <p><strong>What to trust:</strong> non-penalty production and shot quality tell a cleaner story about real striker value.</p>
+
+                <ul>
+                    <li>Target the players whose open-play contribution stays high without penalty inflation.</li>
+                    <li>Cross-check the total goal volume with npxG to separate volume from finishing quality.</li>
+                    <li>Use the graph to spot scorers who convert sustained pressure into real attacking output.</li>
+                </ul>
+
+                <p><strong>Insight:</strong> a striker with fewer goals can be more useful than the headline scorer if most of the volume comes from penalties.</p>
+            </article>
+
+            <aside class="plot-panel">
+                <span class="eyebrow">Interactive chart</span>
+                <h2>Scatter plot</h2>
+                <div class="plot-frame">
+                    {{ plot | safe }}
+                </div>
+            </aside>
+        </section>
+    </main>
+</body>
+</html>

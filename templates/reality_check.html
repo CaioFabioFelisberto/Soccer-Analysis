@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reality Check | Soccer Statistics</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='base.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='reality_check.css') }}">
+</head>
+<body class="module-page reality-page">
+    <main class="shell">
+        <header class="topbar">
+            <div class="brand">
+                <div class="brand-mark">SC</div>
+                <div class="brand-copy">
+                    <small>Module 05</small>
+                    <strong>Reality Check</strong>
+                </div>
+            </div>
+            <a class="home-link" href="/">Back to home</a>
+        </header>
+
+        <section class="analysis-layout">
+            <article class="analysis-panel">
+                <span class="eyebrow">Finishing regression</span>
+                <h1>Reality check</h1>
+                <p>This module compares actual goals with expected goals to detect who is overperforming, underperforming, or converting at a sustainable elite level.</p>
+
+                <p><strong>How to read it:</strong> players above the balance line are outperforming xG, while players below it are leaving goals on the table.</p>
+                <p><strong>Scouting value:</strong> repeated overperformance may signal high finishing quality, but extreme spikes can also indicate unsustainable variance.</p>
+
+                <ul>
+                    <li>Track players close to xG as stable conversion profiles.</li>
+                    <li>Flag large overperformers for deeper video review before projection.</li>
+                    <li>Use underperformers to find buy-low opportunities with strong chance volume.</li>
+                </ul>
+
+                <p><strong>Insight:</strong> the best recruitment decisions come from balancing output, chance quality, and repeatability.</p>
+            </article>
+
+            <aside class="plot-panel">
+                <span class="eyebrow">Interactive chart</span>
+                <h2>Scatter plot</h2>
+                <div class="plot-frame">
+                    {{ plot | safe }}
+                </div>
+            </aside>
+        </section>
+    </main>
+</body>
+</html>

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Soccer Statistics | Football Analytics</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='base.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='index.css') }}">
+</head>
+<body class="home-page">
+
+    <main class="shell">
+        <header class="topbar">
+            <div class="brand">
+                <div class="brand-mark">SC</div>
+                <div class="brand-copy">
+                    <small>Soccer Statistics</small>
+                    <strong>Football Analytics Dashboard</strong>
+                </div>
+            </div>
+            <span class="status-pill">Live data • Top 5 leagues</span>
+        </header>
+
+        <section class="hero">
+            <span class="eyebrow">Scouting intelligence Season 2023/24</span>
+            <h1 id="h1_index">Elite football data with a lighter visual identity.</h1>
+            <p>Explore analysis modules designed to identify creators, finishers, under-21 talents, and comparison profiles through an elegant, responsive interface.</p>
+
+            <div class="stats">
+                <div class="stat">
+                    <strong>6 modules</strong>
+                    <span>Scouting and performance workflows.</span>
+                </div>
+                <div class="stat">
+                    <strong>Green + White</strong>
+                    <span>A brighter palette inspired by pitch and trophy metal.</span>
+                </div>
+                <div class="stat">
+                    <strong>Flask + Pandas + Plotly</strong>
+                    <span>Simple backend, direct visual storytelling.</span>
+                </div>
+            </div>
+        </section>
+
+        <section class="module-grid" aria-label="Analysis modules">
+            <a class="module-card" href="{{ url_for('playmakers') }}">
+                <span class="number">01</span>
+                <h2>Playmakers' DNA</h2>
+                <p>Compare passing progression and ball carrying to separate maestros, infiltrators, and complete engines.</p>
+                <span class="cta">Access analysis</span>
+            </a>
+
+            <a class="module-card" href="{{ url_for('scorers') }}">
+                <span class="number">02</span>
+                <h2>Striker X-Ray</h2>
+                <p>Isolate open-play goals and penalties to reveal truly efficient finishers.</p>
+                <span class="cta">Access analysis</span>
+            </a>
+
+            <a class="module-card" href="{{ url_for('wonderkid') }}">
+                <span class="number">03</span>
+                <h2>Digital Scout</h2>
+                <p>Filter U-21 talents with elite signals before the market catches up.</p>
+                <span class="cta">Access analysis</span>
+            </a>
+
+            <a class="module-card" href="{{ url_for('player_radar') }}">
+                <span class="number">04</span>
+                <h2>Player Radar</h2>
+                <p>Overlay two profiles to compare volume, tactical role, and potential replacements.</p>
+                <span class="cta">Access analysis</span>
+            </a>
+
+            <a class="module-card" href="{{ url_for('reality_check') }}">
+                <span class="number">05</span>
+                <h2>Reality Check</h2>
+                <p>Who is truly clinical and who is just lucky? By comparing Actual Goals with Expected Goals (xG), we identify the most lethal finishers in Europe and the forwards who desperately need finishing drills.</p>
+                <span class="cta">Access analysis</span>
+            </a>
+
+            <a class="module-card" href="{{url_for('league_dna')}}">
+                <span class="number">06</span>
+                <h2>League DNA</h2>
+                <p>How do the top 5 European leagues differ in playing style and player profiles? This module breaks down the unique tactical identities of each league, revealing where to find specific skill sets and how to adapt scouting strategies accordingly.</p>
+                <span class="cta">Access analysis</span>
+            </a>
+        </section>
+    </main>
+
+</body>
+</html>
