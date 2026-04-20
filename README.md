@@ -45,3 +45,6 @@ pip install flask pandas plotly
 python app.py
 python app.py
 http://127.0.0.1:5000
+````
+O dataset utilizado neste projeto foi obtido gratuitamente na plataforma Kaggle, disponibilizado por orkunaktas4. Muito obrigado!
+
