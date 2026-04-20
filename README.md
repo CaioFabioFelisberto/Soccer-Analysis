@@ -25,6 +25,7 @@ O dashboard está dividido em 6 desafios técnicos de ciência de dados aplicado
 -   **Flask:** Micro-framework web para criação de rotas e servidor.
 -   **Plotly Express:** Biblioteca de visualização de dados dinâmica e interativa.
 -   **Jinja2:** Engine de templates para integração entre o back-end Python e o front-end HTML.
+-   **CSS** Feito com o GitHub Copilot Pro, isto me permitiu focar 100% no Back-end
 
 ## 📂 Estrutura do Projeto
 
